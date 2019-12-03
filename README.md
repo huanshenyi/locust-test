@@ -28,3 +28,17 @@ locust -f first-test.py --host=https://www.imooc.com/ --no-web -c 10 -r 2 -t 1m
 - -c：模擬ユーザーの数
 - -r：毎秒ごとに立ち上げるユーザー
 - -t：テストの実行時間
+
+UIに関するパラメタ
+
+```text
+locust -f .\load_test.py -P 8999 --host=https://www.imooc.com --web-host=10.2.64.134 
+```
+
+- -P portの指定
+- --web-host ipホストの指定
+
+```text
+locust -f load_test.py --host=https://www.imooc.com --no-web -c 10 -r 2 -t 1m10s --csv=result/load_test20190808_1
+```
+- csv テスト結果を保存
