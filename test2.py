@@ -1,4 +1,4 @@
-from locust import HttpLocust, TaskSequence,seq_task
+from locust import HttpLocust, TaskSequence, seq_task
 
 
 class ImoocIndex(TaskSequence):
@@ -13,7 +13,7 @@ class ImoocIndex(TaskSequence):
     @seq_task(2)
     def imooc_couse(self):
         print("2:imooc_couse")
-        self.client.get("course/list") # 従業
+        self.client.get("course/list") # 授業リスト
 
 
 class studentUser(HttpLocust):
